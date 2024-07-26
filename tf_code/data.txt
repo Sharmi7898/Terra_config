@@ -1,0 +1,36 @@
+az account list
+[
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "2c0b9b6d-38ca-4e60-b8df-93d52c12b9f2",
+    "id": "48ab2bbb-9531-46a0-8b0a-5e26ad36ee4b",
+    "isDefault": true,
+    "managedByTenants": [],
+    "name": "Free Trial",
+    "state": "Enabled",
+    "tenantDefaultDomain": "sharmilakareem12gmail.onmicrosoft.com",
+    "tenantDisplayName": "Default Directory",
+    "tenantId": "2c0b9b6d-38ca-4e60-b8df-93d52c12b9f2",
+    "user": {
+      "name": "sharmila.kareem12@gmail.com",
+      "type": "user"
+    }
+  }
+]
+
+48ab2bbb-9531-46a0-8b0a-5e26ad36ee4b
+
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/48ab2bbb-9531-46a0-8b0a-5e26ad36ee4b"
+
+"appId": "bd4b4aa5-5aa1-4cd4-96e0-0df58380f353",
+  "displayName": "azure-cli-2024-07-26-11-52-23",
+  "password": "WXr8Q~..pR5rbPWcpOZhyIh4pYJdgSaePn7sFc-e",
+  "tenant": "2c0b9b6d-38ca-4e60-b8df-93d52c12b9f2"
+
+  az login --service-principal -u bd4b4aa5-5aa1-4cd4-96e0-0df58380f353 -p WXr8Q~..pR5rbPWcpOZhyIh4pYJdgSaePn7sFc-e --tenant 2c0b9b6d-38ca-4e60-b8df-93d52c12b9f2
+
+  # sh
+export ARM_CLIENT_ID="bd4b4aa5-5aa1-4cd4-96e0-0df58380f353"
+export ARM_CLIENT_SECRET="WXr8Q~..pR5rbPWcpOZhyIh4pYJdgSaePn7sFc-e"
+export ARM_TENANT_ID="2c0b9b6d-38ca-4e60-b8df-93d52c12b9f2"
+export ARM_SUBSCRIPTION_ID="48ab2bbb-9531-46a0-8b0a-5e26ad36ee4b"
